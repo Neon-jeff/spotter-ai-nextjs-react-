@@ -1,6 +1,6 @@
 'use client'
 import React, { useCallback } from 'react'
-import Map, { Marker, Popup, NavigationControl, GeolocateControl } from 'react-map-gl/mapbox'
+import Map, { Marker} from 'react-map-gl/mapbox'
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { Truck } from 'lucide-react';
 import { Trip } from '@/actions/types';
