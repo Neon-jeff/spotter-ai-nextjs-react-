@@ -47,7 +47,7 @@ This web application is built with Next.js and integrates the following key feat
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/Neon-jeff/spotter-ai-nextjs-react-.git
-   cd nextjs-eld-map
+   cd spotter-ai-nextjs-react-
    ```
 2. **Install dependencies:**
    ```bash
