@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import Map, { Marker} from 'react-map-gl/mapbox'
+import Map, { Marker, NavigationControl} from 'react-map-gl/mapbox'
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { Truck } from 'lucide-react';
 import { Trip } from '@/actions/types';
@@ -25,29 +25,29 @@ const DetailsMap = ({ trip }: { trip: Trip }) => {
                         style={{ borderRadius: 20, height: '100%' }}
                     >
                         <Marker className='' latitude={Number(trip.current_location?.lat)} longitude={Number(trip.current_location?.lon)} >
-                            <div className='bg-white p-2 text-[.6rem] flex gap-1 items-center   rounded-full space-y-0'>
+                            <div className='bg-white p-2 text-[.6rem] border-2 border-blue-500 flex gap-1 items-center   rounded-full space-y-0'>
                                 <Truck size={15} className='text-green-600' />
-                                <span className='text-[.5rem] inset-0 text-gray-600'>Current Location</span>
+                                <span className='text-[.7rem] inset-0 text-gray-600'>Current Location</span>
                                 <span className='font-bold'>{trip.current_location.city}, {trip.current_location.country}</span>
                             </div>
                             
                         </Marker>
                         <Marker latitude={Number(trip.pickup_location.lat)} longitude={Number(trip.pickup_location.lon)} >
-                            <div className='bg-white p-2 text-[.6rem] flex gap-1 items-center   rounded-full space-y-0'>
+                            <div className='bg-white p-2 text-[.6rem] border-2 border-blue-500 flex gap-1 items-center   rounded-full space-y-0'>
                                 <Truck size={15} className='text-green-600' />
-                                <span className='text-[.5rem] inset-0 text-gray-600'>Pickup</span>
+                                <span className='text-[.7rem] inset-0 text-gray-600'>Pickup</span>
                                 {/* <span className='font-bold'>{trip.pickup_location.formatted}</span> */}
                             </div>
                         </Marker>
                         <Marker latitude={Number(trip.dropoff_location.lat)} longitude={Number(trip.dropoff_location.lon)} >
-                            <div className='bg-white p-2 text-[.6rem] flex gap-1 items-center   rounded-full space-y-0'>
+                            <div className='bg-white p-2 text-[.6rem] border-2 border-blue-500 flex gap-1 items-center   rounded-full space-y-0'>
                                 <Truck size={15} className='text-green-600' />
-                                <span className='text-[.5rem] inset-0 text-gray-600'>Dropoff</span>
+                                <span className='text-[.7rem] inset-0 text-gray-600'>Dropoff</span>
                                 {/* <span className='font-bold'>{trip.pickup_location.formatted}</span> */}
                             </div>
                         </Marker>
                      
-                        {/* <NavigationControl /> */}
+                        <NavigationControl />
                         {/* <PolylineOverlay points={[[Number(trip.current_location.lon), Number(trip.current_location.lat)], [Number(trip.pickup_location.lon), Number(trip.pickup_location.lat)], [Number(trip.dropoff_location.lon),Number(trip.dropoff_location.lat)]]} /> */}
                     </Map>
                 }

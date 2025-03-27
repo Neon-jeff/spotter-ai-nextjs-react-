@@ -26,7 +26,7 @@ const OutputMap = () => {
         
     >
       <Marker latitude={Number(current_location?.lat)} longitude={Number(current_location?.lon)} >
-        <div className='bg-white p-2 text-[.6rem] flex gap-1 items-center   rounded-full space-y-0'>
+        <div className='bg-white border-2 border-blue-500 p-2 text-[.6rem] flex gap-1 items-center   rounded-full space-y-0'>
           <Truck size={15} className='text-green-600'/>
           <span className='text-[.5rem] inset-0 text-gray-600'>Current Location</span>
           <span className='font-bold'>{current_location.city}, {current_location.country}</span>
