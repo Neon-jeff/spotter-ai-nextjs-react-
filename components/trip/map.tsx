@@ -1,5 +1,5 @@
 'use client'
-import React, { useCallback } from 'react'
+import React from 'react'
 import Map, { Marker} from 'react-map-gl/mapbox'
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { Truck } from 'lucide-react';
@@ -19,13 +19,10 @@ const DetailsMap = ({ trip }: { trip: Trip }) => {
                     <Map
                         mapboxAccessToken={token}
                         mapStyle="mapbox://styles/mapbox/streets-v12"
-                        // style={classes.mapStyle}
                         initialViewState={{ latitude: Number(trip.pickup_location?.lat), longitude: Number(trip.pickup_location?.lon), zoom: 10 }}
                         maxZoom={20}
                         minZoom={3}
                         style={{ borderRadius: 20, height: '100%' }}
-
-
                     >
                         <Marker className='' latitude={Number(trip.current_location?.lat)} longitude={Number(trip.current_location?.lon)} >
                             <div className='bg-white p-2 text-[.6rem] flex gap-1 items-center   rounded-full space-y-0'>

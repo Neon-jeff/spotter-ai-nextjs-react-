@@ -1,5 +1,4 @@
-import { GetIP } from "@/actions/ip";
-import EldGraph from "@/components/chart";
+
 import RouteForm from "@/components/form";
 import OutputMap from "@/components/map";
 import { Suspense } from "react";
@@ -14,7 +13,6 @@ export default async function Home() {
       <Suspense fallback={<div>Loading...</div>}>
       <OutputMap />
       </Suspense>
-      {/* <EldGraph/> */}
       </div>
     </div>
   );

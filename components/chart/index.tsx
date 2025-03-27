@@ -20,7 +20,7 @@ const eldData = [
 
 // Generate ticks every 15 minutes (0.25 hours)
 const generateTimeTicks = () => {
-  let ticks = [];
+  const ticks = [];
   for (let i = 0; i <= 24; i += 0.25) {
     ticks.push(i);
   }

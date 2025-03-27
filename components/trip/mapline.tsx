@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import Map, { Source, Layer, useMap } from "react-map-gl/mapbox";
-import mapboxgl from "mapbox-gl";
+import{ useMap } from "react-map-gl/mapbox";
 
 interface PolylineOverlayProps {
     points: [number, number][]; // Array of [longitude, latitude] coordinates
